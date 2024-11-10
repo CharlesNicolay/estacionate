@@ -9,26 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-
-            
-         @media (max-width: 600px) {
-           .icon-container {
-                text-align: center;
-                margin: 20px 0;
-                left: 15%!important;
-                position: fixed;
-                z-index: 7000;
-                margin-top: 70px!important;
-            }
-           .navbar-toggler {
-                border-color: white!important; /* Cambia el color del borde */
-            }
-
-            .navbar-toggler-iconn {
-                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' height='30' width='30' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
-            }
-
-        }     
         body {
             background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 64%)), /* Gradiente */ url(assets/fondo.jpg);
             background-size: cover;
@@ -60,7 +40,7 @@
             left: 40%;
             position: fixed;
             z-index: 7000;
-            margin-top: 100px;
+            margin-top: 66px;
         }
         .icon-container i {
             font-size: 2rem;
@@ -68,16 +48,10 @@
             color: #007bff;
             cursor: pointer;
             
+           
         }
         .search-container {
             margin: 10px;
-        }
-        nav{
-           background-color: #1e1e1e;
-
-        }
-        .nav-link{
-            color: white!important;
         }
 
     </style>
@@ -93,13 +67,13 @@
         <div class="collapse navbar-collapse " id="navbarNav" style="justify-content: flex-end;">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="index.jsp">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recurrentes.html">Lugares Recurrentes</a>
+                    <a class="nav-link" href="recurrentes.jsp">Lugares Recurrentes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recomendacioness.html">Recomendaciones</a>
+                    <a class="nav-link" href="recomendaciones.jsp">Recomendaciones</a>
                 </li>
             </ul>
             <form class="d-flex ms-auto">
@@ -129,31 +103,31 @@
         <a href ="index2.html" class="btn btn-primary btn-lg">Buscar estacionamientos</a>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   <script async defer
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBIO2xriYgqPLWW2hnlwCxZNirRtUQ6lQ&callback=initMap">
 </script>
-    <script>
-    let map, userMarker, directionsService, directionsRenderer, destinationMarker, infoWindow;
 
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
+<script>
+    let map, userMarker, directionsService, directionsRenderer, destinationMarker, infoWindow;
+    function initMap()
+    {
+        map = new google.maps.Map(document.getElementById('map'),
+        {
             zoom: 15,
             center: { lat: -34.397, lng: 150.644 } // Coordenadas predeterminadas
         });
-
         directionsService = new google.maps.DirectionsService();
         directionsRenderer = new google.maps.DirectionsRenderer();
         directionsRenderer.setMap(map);
-
         infoWindow = new google.maps.InfoWindow();
-
         // Intentar obtener la ubicación del usuario
-        if (navigator.geolocation) {
+        if (navigator.geolocation)
+        {
             navigator.geolocation.getCurrentPosition(
-                position => {
+                position =>{
                     const userPos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
@@ -204,7 +178,6 @@
             handleLocationError(false, map.getCenter());
         }
     }
-
     function calculateAndDisplayRoute(start, end) {
         directionsService.route(
             {
@@ -228,7 +201,6 @@
             'Error: Tu navegador no soporta la geolocalización.';
     }
 </script>
-
 
 <script>
     // Añadir un evento para seleccionar íconos

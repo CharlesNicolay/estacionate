@@ -1,31 +1,27 @@
+<%-- 
+    Document   : busqueda
+    Created on : 9 nov. 2024, 21:08:02
+    Author     : LAB-USR-AREQUIPA
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estacionate</title>
+    <title>Página con Mapa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 64%)), /* Gradiente */ url(assets/fondo.jpg);
-            background-size: cover;
-            height: auto;
+            height: 150vh;
             display: flex;
             flex-direction: column;
         }
         .map-container {
             flex: 1;
             position: relative;
-        }
-        .seleccionado
-        {
-            background-color: white;
-            padding: 5px;
-            border-radius: 20px;
-            border-style: double;
         }
         #map {
             width: 100%;
@@ -37,97 +33,155 @@
         .icon-container {
             text-align: center;
             margin: 20px 0;
-            left: 40%;
-            position: fixed;
-            z-index: 7000;
-            margin-top: 66px;
         }
         .icon-container i {
             font-size: 2rem;
             margin: 0 15px;
             color: #007bff;
             cursor: pointer;
-            
-           
         }
         .search-container {
             margin: 10px;
         }
-
     </style>
 </head>
 <body>
-   
-<nav class="navbar navbar-expand-lg navbar-light  fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets/logo.png" width="150"></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mi Mapa</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarNav" style="justify-content: flex-end;">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.jsp">Inicio</a>
+                    <a class="nav-link" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recurrentes.jsp">Lugares Recurrentes</a>
+                    <a class="nav-link" href="recurrentes.html">Lugares recurrentes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recomendaciones.jsp">Recomendaciones</a>
+                    <a class="nav-link" href="recomendacioness.html">Recomendaciones</a>
                 </li>
             </ul>
-            <form class="d-flex ms-auto">
-                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">Buscar</button>
-            </form>
-             <a href="login.html" class="nav-link">
-                <button class="btn btn-outline-primary" type="submit">Login</button>
-            </a>
         </div>
-    </div>
-</nav>
+    </nav>
 
-
-    <div class="icon-container" >
-        <i class="fas fa-car seleccionado"></i>
+    <div class="icon-container">
+        <i class="fas fa-car"></i>
         <i class="fas fa-motorcycle"></i>
         <i class="fas fa-truck"></i>
         <i class="fas fa-bicycle"></i>
     </div>
-  
+    <div class="search-container text-center">
+        <input type="text" id="searchInput" class="form-control" placeholder="Buscar ubicación">
+        <button id="searchButton" class="btn btn-primary mt-2">Buscar</button>
+    </div>
+     <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Estacionamiento</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Calificación</th>
+                    <th scope="col">Precio por Hora</th>
+                    <th scope="col">dirigir ruta></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Estacionamiento Centro</td>
+                    <td>Calle 1, No. 123</td>
+                    <td>
+                        <span class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                    </td>
+                    <td>$5.00</td>
+                    <td><button class="btn btn-danger">IR </button></td>
+                </tr>
+                <tr>
+                    <td>Estacionamiento Plaza</td>
+                    <td>Avenida 2, No. 456</td>
+                    <td>
+                        <span class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                    </td>
+                    <td>$4.00</td>
+                    <td><button class="btn btn-danger">IR </button></td>
+                </tr>
+                <tr>
+                    <td>Estacionamiento Sur</td>
+                    <td>Calle 3, No. 789</td>
+                    <td>
+                        <span class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                    </td>
+                    <td>$6.00</td>
+                    <td><button class="btn btn-danger">IR </button></td>
+                </tr>
+                <tr>
+                    <td>Estacionamiento Norte</td>
+                    <td>Calle 4, No. 321</td>
+                    <td>
+                        <span class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                    </td>
+                    <td>$3.50</td>
+                    <td><button class="btn btn-danger">IR </button></td>
+                </tr>
+            </tbody>
+        </table>
     <div class="map-container">
         <div id="map"></div>
     </div>
 
     <div class="text-center bottom-button">
-        <a href ="index2.html" class="btn btn-primary btn-lg">Buscar estacionamientos</a>
+        <button class="btn btn-primary btn-lg">Buscar estacionamientos</button>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script async defer
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBIO2xriYgqPLWW2hnlwCxZNirRtUQ6lQ&callback=initMap">
 </script>
-
-<script>
+    <script>
     let map, userMarker, directionsService, directionsRenderer, destinationMarker, infoWindow;
-    function initMap()
-    {
-        map = new google.maps.Map(document.getElementById('map'),
-        {
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: { lat: -34.397, lng: 150.644 } // Coordenadas predeterminadas
         });
+
         directionsService = new google.maps.DirectionsService();
         directionsRenderer = new google.maps.DirectionsRenderer();
         directionsRenderer.setMap(map);
+
         infoWindow = new google.maps.InfoWindow();
+
         // Intentar obtener la ubicación del usuario
-        if (navigator.geolocation)
-        {
+        if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
-                position =>{
+                position => {
                     const userPos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
@@ -178,6 +232,7 @@
             handleLocationError(false, map.getCenter());
         }
     }
+
     function calculateAndDisplayRoute(start, end) {
         directionsService.route(
             {
@@ -200,20 +255,6 @@
             'Error: El servicio de geolocalización falló.' :
             'Error: Tu navegador no soporta la geolocalización.';
     }
-</script>
-
-<script>
-    // Añadir un evento para seleccionar íconos
-    const icons = document.querySelectorAll('.icon-container i');
-
-    icons.forEach(icon => {
-        icon.addEventListener('click', () => {
-            // Remover la clase "seleccionado" de todos los íconos
-            icons.forEach(i => i.classList.remove('seleccionado'));
-            // Añadir la clase "seleccionado" al ícono clicado
-            icon.classList.add('seleccionado');
-        });
-    });
 </script>
 </body>
 </html>
