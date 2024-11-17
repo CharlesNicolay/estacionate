@@ -14,6 +14,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 public class EstacionamientoDAO
 {
+    public EstacionamientoDAO()
+    {
+        
+    }
     Conexion conexion=Conexion.Obtener_Conexion();//LLamamos al metodo Singleton
     Connection con;
     PreparedStatement ps;

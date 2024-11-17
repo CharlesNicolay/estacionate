@@ -1,4 +1,8 @@
 package com.mapas.modelo;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Estacionamiento
 {
     int id;
@@ -29,4 +33,16 @@ public class Estacionamiento
     public void setNombre(String nombre) {this.nombre = nombre;}
     public int getCapacidad() {return capacidad;}
     public void setCapacidad(int capacidad) {this.capacidad = capacidad;}
+    /*
+    EstacionamientoDAO Nuevo=new EstacionamientoDAO();
+    public void listar()
+    {
+        List<Estacionamiento> algo = new ArrayList();
+        algo=Nuevo.listar();
+        for (Estacionamiento hola:algo)
+        {
+            System.out.println(hola.latitud+" , "+hola.longitud);
+        }
+    }
+    */
 }
