@@ -70,7 +70,7 @@
                 <label for="password">Contraseña</label>
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
-            <a href="index.html" class="btn btn-primary btn-block">Registrarme</a>
+            <a href="login.jsp" class="btn btn-primary btn-block">Registrarme</a>
         </form>
     </div>
 

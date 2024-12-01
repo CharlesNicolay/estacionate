@@ -75,13 +75,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="index.jsp">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recurrentes.html">Lugares Recurrentes</a>
+                    <a class="nav-link" href="recurrentes.jsp">Lugares Recurrentes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="recomendacioness.html">Recomendaciones</a>
+                    <a class="nav-link active" href="recomendaciones.jsp">Recomendaciones</a>
                 </li>
             </ul>
             <form class="d-flex ms-auto">

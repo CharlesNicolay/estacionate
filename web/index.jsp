@@ -78,10 +78,12 @@
             </ul>
             <form class="d-flex ms-auto">
                 <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">Buscar</button>
+                <a href="busqueda.jsp" class="nav-link">
+                    <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">buscar</button>
+                </a>
             </form>
-             <a href="login.html" class="nav-link">
-                <button class="btn btn-outline-primary" type="submit">Login</button>
+             <a href="login.jsp" class="nav-link">
+                 <button class="btn btn-outline-primary" type="submit">login</button>
             </a>
         </div>
     </div>

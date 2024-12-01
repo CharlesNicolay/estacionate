@@ -110,20 +110,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="index.jsp">Inicio</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link " href="recurrentes.html">Lugares Recurrentes</a>
+                    <a class="nav-link " href="recurrentes.jsp">Lugares Recurrentes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recomendacioness.html">Recomendaciones</a>
+                    <a class="nav-link" href="recomendaciones.jsp">Recomendaciones</a>
                 </li>
             </ul>
             <form class="d-flex ms-auto">
                 <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
-             <a href="login.html" class="nav-link">
+             <a href="login.jsp" class="nav-link">
                 <button class="btn btn-outline-primary" type="submit">Login</button>
             </a>
         </div>

@@ -54,13 +54,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="index.jsp">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recurrentes.html">Lugares recurrentes</a>
+                    <a class="nav-link" href="recurrentes.jsp">Lugares recurrentes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recomendacioness.html">Recomendaciones</a>
+                    <a class="nav-link" href="recomendaciones.jsp">Recomendaciones</a>
                 </li>
             </ul>
         </div>

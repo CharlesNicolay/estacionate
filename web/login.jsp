@@ -86,8 +86,9 @@
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
                 <div class="registro">
-                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
-                    <a id="registro1" class="btn btn-primary btn-block" href="registrarse.html">Registrarse</a>
+                    <a id="registro1" class="btn btn-primary btn-block" href="index.jsp">Entrar</a>
+                    <%--<button type="submit" class="btn btn-success btn-block"><a class="nav-link" href="index.jsp">Entrar</a></button>--%>
+                    <a id="registro1" class="btn btn-primary btn-block" href="registrarse.jsp">Registrarse</a>
                 </div>
             </form>
         </div>
