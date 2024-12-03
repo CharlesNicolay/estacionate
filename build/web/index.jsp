@@ -76,11 +76,9 @@
                     <a class="nav-link" href="recomendaciones.jsp">Recomendaciones</a>
                 </li>
             </ul>
-            <form class="d-flex ms-auto">
-                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                <a href="busqueda.jsp" class="nav-link">
-                    <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">buscar</button>
-                </a>
+            <form class="d-flex ms-auto" method="POST" action="SV_Buscar">
+                <input name="busqueda" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">buscar</button>
             </form>
              <a href="login.jsp" class="nav-link">
                  <button class="btn btn-outline-primary" type="submit">login</button>

@@ -94,7 +94,7 @@
         </div>
     </div>
 </nav>
-
+<%--
     <div class="icon-container">
         <i class="fas fa-car seleccionado"></i>
         <i class="fas fa-motorcycle"></i>
@@ -105,6 +105,8 @@
         <input type="text" id="searchInput" class="form-control" placeholder="Buscar ubicación">
         <button id="searchButton" class="btn btn-primary mt-2">Buscar</button>
     </div>
+--%>
+    <p></p>
     <div class="container mt-5">
         <h1 class="text-center">Estacionamientos Cercanos</h1>
         <table class="table table-striped mt-4">
